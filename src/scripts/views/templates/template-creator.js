@@ -16,7 +16,7 @@ const restoDetailTemplate = (resto) => {
 
   const htmlStr = `
     <h2 tabindex="0" class="resto__title">${resto.name}</h2>
-    <img tabindex="0" class="resto__poster" src="${
+    <img tabindex="0" class="resto__poster" crossorigin="anonymous" src="${
   CONFIG.BASE_IMAGE_URL + resto.pictureId
 }" alt="${resto.name}" />
     <div class="content__detail">
@@ -66,7 +66,7 @@ const restoDetailTemplate = (resto) => {
 const restoItemTemplate = (resto) => `
   <div class="resto-item">
     <div class="resto-item__header">
-        <img tabindex="0" class="resto-item__header__poster" alt="${resto.name}"
+        <img tabindex="0" class="resto-item__header__poster" crossorigin="anonymous" alt="${resto.name}"
             src="${
   resto.pictureId
     ? CONFIG.BASE_IMAGE_URL + resto.pictureId
